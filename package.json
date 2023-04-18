@@ -1,0 +1,26 @@
+{
+	"name": "duck-client",
+	"version": "1.0.0",
+	"description": "SmartDuck",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"dev": "live-server",
+		"type": "git",
+		"url": "git+https://github.com/Tellur89/duck-client.git"
+	},
+	"author": "Ducks_LFA",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Tellur89/duck-client/issues"
+	},
+	"homepage": "https://github.com/Tellur89/duck-client#readme",
+	"dependencies": {
+		"node": "^19.8.1"
+	},
+	"devDependencies": {
+		"live-server": "^1.2.2"
+	}
+}
