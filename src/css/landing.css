@@ -11,7 +11,11 @@
 /* MAIN TITLE */
 h1 {
     font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
     margin-top: 16rem;
+    animation: 1.4s ease-out 0s 1 slideInLeft;
+    -webkit-animation: 1.4s ease-out 0s 1 slideInLeft;
 }
 .main-title {
     margin: 4rem;
@@ -19,44 +23,92 @@ h1 {
 .main-title h5 {
     padding: 2.5rem;
     font-size: 4rem;
+    letter-spacing: 0.2rem;
+    animation: 1s ease-out 0s 1 slideInRight;
+    -webkit-animation: 1.4s ease-out 0s 1 slideInRight;
 }
-
 
 .secondary-title {
     font-size: 4rem;
     margin-top: 4rem;
+    letter-spacing: 0.5rem;
+    animation: 1s ease-out 0s 1 fadeIn;
+    -webkit-animation: 3.8s fadeIn;
 }
 
 .col {
     display: flex;
     justify-content: center;
 }
-.categories h6 {
-    font-size: 3.5rem;
-}
-
-.categories .button {
-    background-color: #FFFFFF;
-    color: #8701F1;
-    width: 40rem;
-    height: 8rem;
-    margin-top: 6rem;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.categories a {
-    text-decoration: none;
-}
-
 img {
     width: 6rem;
     height: 6rem;
 }
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+}
+    100% {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+}
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .main-title h5 {
+        font-size: 2.5rem;
+    }
+    .secondary-title {
+        font-size: 2.4rem;
+  }
+}
+
+  @media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .main-title h5 {
+        font-size: 2rem;
+}
+    .secondary-title {
+        font-size: 1.8rem;
+    }
+}
+
