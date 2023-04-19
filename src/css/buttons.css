@@ -40,3 +40,26 @@
 	</div>
 </a>
 */
+
+
+/*Responsive on main landing page */
+@media only screen and (max-width: 900px) {
+  .categories .button {
+        width: 20rem;
+        height: 6rem;
+    }
+    .categories h6 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .categories .button {
+        width: 16rem;
+        height: 5rem;
+    }
+    .categories h6 {
+        font-size: 2rem;
+    }
+}
