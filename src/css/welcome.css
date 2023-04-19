@@ -11,8 +11,8 @@
 .arrowIcon {
     width: 10rem;
     height: 10rem;
-    animation: 1s slideInRight infinite;
-    -webkit-animation: 2s jump ease infinite;
+    animation: 1s jump infinite;
+    -webkit-animation: 1s jump infinite;
 }
 
 .duckImg{
