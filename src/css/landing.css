@@ -27,6 +27,10 @@ h1 {
     margin-top: 4rem;
 }
 
+.col {
+    display: flex;
+    justify-content: center;
+}
 .categories h6 {
     font-size: 3.5rem;
 }
@@ -34,9 +38,9 @@ h1 {
 .categories .button {
     background-color: #FFFFFF;
     color: #8701F1;
-    width: 80rem;
+    width: 40rem;
     height: 8rem;
-    margin: 5rem;
+    margin-top: 6rem;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -45,6 +49,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .categories a {
@@ -52,6 +57,6 @@ h1 {
 }
 
 img {
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
 }
