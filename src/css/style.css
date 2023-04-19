@@ -1,6 +1,7 @@
 @import url("landing.css");
 @import url("buttons.css");
 @import url("questions.css");
+@import url("welcome.css");
 
 * {
 	box-sizing: border-box;
