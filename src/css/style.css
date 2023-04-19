@@ -2,6 +2,7 @@
 @import url("buttons.css");
 @import url("questions.css");
 @import url("welcome.css");
+@import url("rules.css");
 
 * {
 	box-sizing: border-box;

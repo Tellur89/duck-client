@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+.landing-btns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* MAIN TITLE */
 h1 {
     font-size: 8rem;

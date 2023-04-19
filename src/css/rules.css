@@ -1,0 +1,56 @@
+.rules-container{
+    margin: 3rem;
+}
+.rules-container ul li {
+    padding: 4rem;
+    font-size: 4rem;
+    animation: 3s ease-out 0s 1 fadeIn;
+    -webkit-animation: 3s ease-out 0s 1 fadeIn;
+}
+
+.rules-btns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .rules-container ul li {
+        font-size: 2.5rem;
+    }
+    .btn-container .button {
+        width: 15rem;
+    }
+    .btn-container h6 {
+        font-size: 1.5rem;
+    }
+}
+
+  @media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .rules-container ul li {
+        font-size: 2rem;
+    }
+    .btn-container .button {
+        width: 15rem;
+    }
+    .btn-container h6 {
+        font-size: 1.5rem;
+    }
+}
+
