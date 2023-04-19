@@ -1,12 +1,9 @@
-question {
-	font-size: 5rem;
-}
-
 .body-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	/* font-size: 20rem; */
 }
 .container-questions {
 	display: flex;
@@ -16,8 +13,42 @@ question {
 	height: 60%;
 	width: 50%;
 	background-color: rgb(255, 255, 255, 30%);
+	color: white;
 }
 .timer {
 	align-self: flex-end;
 	margin-right: 10rem;
+	font-size: 2rem;
+}
+
+.question {
+	width: 80%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+}
+
+.title-question {
+	font-size: 3rem;
+}
+.answers {
+	width: 80%;
+	height: 8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.answers > div {
+	background-color: rgb(52, 3, 101, 70%);
+}
+.btn-purple {
+	/* background-color: red; */
+	width: 4rem;
+	height: 2rem;
+	color: white;
 }

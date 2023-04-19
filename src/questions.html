@@ -27,13 +27,18 @@
 	<body class="body-center">
 		<section class="container container-questions">
 			<div class="timer" id="timer">Time left: 15s</div>
-			<div id="question">
-				<div class="title-question" id="title-question"><question>Question</question></div>
-				<div id="answers">
-					<answer class="btn btn-primary" id="answer-1">A</answer>
-					<answer class="btn btn-primary" id="answer-2">B</answer>
-					<answer class="btn btn-primary" id="answer-3">C</answer>
-					<answer class="btn btn-primary" id="answer-4">D</answer>
+
+			<div id="question" class="question">
+				<div class="title-question" id="title-question"><div>Question</div></div>
+				<div id="answers" class="answers">
+					<div class="d-flex">
+						<div class="btn btn-purple" id="answer-1">A</div>
+						<div class="btn btn-purple" id="answer-2">B</div>
+					</div>
+					<div class="d-flex">
+						<div class="btn btn-purple" id="answer-3">C</div>
+						<div class="btn button" id="answer-4">D</div>
+					</div>
 				</div>
 				<div class="footer-question" id="footer-question">
 					<div id="number-questions"></div>
