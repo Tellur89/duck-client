@@ -1,10 +1,10 @@
 /* White button */
-.categories .button {
+.btn-container .button {
     background-color: #FFFFFF;
     color: #8701F1;
-    width: 40rem;
-    height: 8rem;
-    margin-top: 6rem;
+    width: 20rem;
+    margin: 2rem;
+    height: 7rem;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -16,13 +16,13 @@
     flex-wrap: wrap;
     transition: all .3s ease-in-out 0s;
 }
-.categories h6 {
-    font-size: 3.5rem;
+.btn-container h6 {
+    font-size: 2rem;
 }
-.categories a {
+.btn-container a {
     text-decoration: none;
 }
-.categories .button:hover {
+.btn-container .button:hover {
     background-color: #d4d4d4;
     color: #9305ff;
     transform: translateY(-10%);
@@ -32,34 +32,37 @@
     -o-transform: translateY(-10%);
 }
 /* HTML for white button 
-
-<a href=#>
-	<div class="button">
-			<h6>Geography</h6>
-			<img src="./src/img/icons/earthIcon.png" alt="Earth icon">
-	</div>
-</a>
+					<div class="btn-container">
+						<section class="history-section">
+							<a href=#>
+								<div class="button">
+									<h6>History</h6>
+									<img src="./src/img/icons/historyIcon.png" alt="History icon">
+								</div>
+							</a>
+						</section>
+					</div>
 */
 
 
 /*Responsive on main landing page */
 @media only screen and (max-width: 900px) {
-  .categories .button {
+  .btn-container .button {
         width: 20rem;
         height: 6rem;
     }
-    .categories h6 {
+    .btn-container h6 {
         font-size: 2.5rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
 
-    .categories .button {
+    .btn-container .button {
         width: 16rem;
         height: 5rem;
     }
-    .categories h6 {
+    .btn-container h6 {
         font-size: 2rem;
     }
 }
