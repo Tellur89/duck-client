@@ -1,0 +1,32 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* MAIN TITLE */
+h1 {
+    font-size: 8rem;
+    margin-top: 20rem;
+}
+.main-title {
+    margin: 4rem;
+}
+.main-title h5 {
+    padding: 2.5rem;
+    font-size: 4rem;
+}
+
+
+.secondary-title {
+    font-size: 4rem;
+}
+
+.categories h6 {
+    font-size: 3.5rem;
+}
