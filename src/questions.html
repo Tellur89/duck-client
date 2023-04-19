@@ -19,9 +19,27 @@
 			integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
 			crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" href="./src/css/style.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/questions.css" />
 		<script defer src="./index.js"></script>
 		<title>SmartDuck - questions</title>
 	</head>
-	<body></body>
+	<body class="body-center">
+		<section class="container container-questions">
+			<div class="timer" id="timer">Time left: 15s</div>
+			<div id="question">
+				<div class="title-question" id="title-question"><question>Question</question></div>
+				<div id="answers">
+					<answer class="btn btn-primary" id="answer-1">A</answer>
+					<answer class="btn btn-primary" id="answer-2">B</answer>
+					<answer class="btn btn-primary" id="answer-3">C</answer>
+					<answer class="btn btn-primary" id="answer-4">D</answer>
+				</div>
+				<div class="footer-question" id="footer-question">
+					<div id="number-questions"></div>
+					<button class="btn btn-white">Next</button>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>

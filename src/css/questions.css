@@ -1,0 +1,23 @@
+question {
+	font-size: 5rem;
+}
+
+.body-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.container-questions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 60%;
+	width: 50%;
+	background-color: rgb(255, 255, 255, 30%);
+}
+.timer {
+	align-self: flex-end;
+	margin-right: 10rem;
+}
