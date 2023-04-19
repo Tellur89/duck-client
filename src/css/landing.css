@@ -45,6 +45,54 @@ img {
     height: 6rem;
 }
 
+/* White button */
+.categories .button {
+    background-color: #FFFFFF;
+    color: #8701F1;
+    width: 40rem;
+    height: 8rem;
+    margin-top: 6rem;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all .3s ease-in-out 0s;
+}
+.categories h6 {
+    font-size: 3.5rem;
+}
+.categories a {
+    text-decoration: none;
+}
+.categories .button:hover {
+    background-color: #d4d4d4;
+    color: #9305ff;
+    transform: translateY(-10%);
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    -o-transform: translateY(-10%);
+}
+/* HTML for white button 
+					<div class="col">
+						<section class="history-section">
+							<a href=#>
+								<div class="button">
+									<h6>History</h6>
+									<img src="./src/img/icons/historyIcon.png" alt="History icon">
+								</div>
+							</a>
+						</section>
+					</div>
+*/
+
+
+
 @keyframes slideInLeft {
     0% {
       transform: translateX(-100%);
@@ -98,6 +146,13 @@ img {
     .secondary-title {
         font-size: 2.4rem;
   }
+  .categories .button {
+    width: 20rem;
+    height: 6rem;
+    }
+    .categories h6 {
+        font-size: 2.5rem;
+    }
 }
 
   @media only screen and (max-width: 400px) {
@@ -109,6 +164,13 @@ img {
 }
     .secondary-title {
         font-size: 1.8rem;
+    }
+    .categories .button {
+        width: 16rem;
+        height: 5rem;
+    }
+    .categories h6 {
+        font-size: 2rem;
     }
 }
 
