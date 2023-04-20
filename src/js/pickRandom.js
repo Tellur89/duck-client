@@ -4,4 +4,4 @@ export default function pickRandom(arr, num) {
 	return shuffled.slice(0, num);
 }
 
-// module.exports = { pickRandom };
+// module.exports = pickRandom;

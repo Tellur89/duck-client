@@ -1,12 +1,15 @@
 import pickRandom from './pickRandom.js';
+// import displayRandomQ from './displayRandomQ';
 
 async function displayQuestion() {
 	try {
-		const res = await fetch('http://localhost:3000/questions/history'); //replace history with the value of the clicked button on category page
+		const res = await fetch('http://localhost:3000/questions/category'); //replace history with the value of the clicked button on category page
 		const questions = await res.json();
-		console.log(questions);
+		// console.log(questions);
+
 		const questionsContainer = document.querySelector('.carousel-inner');
 		const randomQuestions = pickRandom(questions, 5); // specify how many question you want to see
+		// console.log(randomQuestions);
 
 		// DISPLAY ONLY FIRST QESTION
 		// box
@@ -127,6 +130,25 @@ async function displayQuestion() {
 
 			questionsContainer.appendChild(questionBox);
 		}
+
+		let index = 0;
+
+		function startTimer() {
+			let timeMax = 15;
+			const timer = setInterval(function () {
+				timeMax--;
+				document.getElementById('timer').textContent = `Time left: ${timeMax}s`;
+				if (timeMax === 0) {
+					clearInterval(timer);
+					index++;
+					if (index < randomQuestions.length) {
+						startTimer();
+					}
+				}
+			}, 1000);
+		}
+
+		startTimer();
 	} catch (err) {
 		console.log(err);
 	}
