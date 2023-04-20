@@ -1,0 +1,23 @@
+.container-completed-page{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: 10rem;
+    width: 60%;
+	background-color: rgb(255, 255, 255, 30%);
+	color: white;
+    margin-bottom: 4rem;
+    border: 1px solid white;
+}
+
+.completed-header {
+    margin-top: 2rem;
+    animation: none;
+    -webkit-animation: none;
+}
+
+.completed-btns-container {
+    display: flex;
+    justify-content: space-between;
+}
