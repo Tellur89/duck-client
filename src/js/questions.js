@@ -1,33 +1,69 @@
+import pickRandom from './pickRandom.js';
+
 async function displayQuestion() {
 	try {
-		const res = await fetch('http://localhost:3000/questions');
+		const res = await fetch('http://localhost:3000/questions/history'); //replace history with the value of the clicked button on category page
 		const questions = await res.json();
+		console.log(questions);
 		const questionsContainer = document.querySelector('.carousel-inner');
-
-		const pickRandom = (arr, num) => {
-			const shuffled = [...arr].sort(() => 0.5 - Math.random());
-			// console.log(shuffled);
-			return shuffled.slice(0, num);
-		};
 		const randomQuestions = pickRandom(questions, 5); // specify how many question you want to see
 
-		//DISPLAYING ONLY 1 QESTION
-		//box
+		// DISPLAY ONLY FIRST QESTION
+		// box
 		const questionBox = document.createElement('div');
 		questionBox.className = 'carousel-item active';
-		questionBox.setAttribute('data-bs-interval', '2000');
-		questionBox.setAttribute('data-bs-pause', 'false');
+		questionBox.setAttribute('data-bs-interval', '15000');
+		questionBox.setAttribute('data-bs-pause', false);
 
 		//slide
 		const question = document.createElement('div');
-		question.className = 'question d-block w-100';
+		question.className = 'd-block question position-relative';
 		questionBox.appendChild(question);
 
-		//question
+		//question title
 		const titleQuestion = document.createElement('div');
 		titleQuestion.className = 'title-question';
 		titleQuestion.textContent = randomQuestions[0].question;
 		question.appendChild(titleQuestion);
+
+		//answers box
+		const answers = document.createElement('div');
+		answers.className = 'answers';
+		question.appendChild(answers);
+
+		//answers row A and B
+		const answersCol1 = document.createElement('div');
+		answersCol1.className = 'd-flex justify-content-around';
+		answers.appendChild(answersCol1);
+
+		//answer A
+		const answerA = document.createElement('div');
+		answerA.className = 'btn btn-purple';
+		answerA.textContent = randomQuestions[0].answer1;
+		answersCol1.appendChild(answerA);
+
+		//answer B
+		const answerB = document.createElement('div');
+		answerB.className = 'btn btn-purple';
+		answerB.textContent = randomQuestions[0].answer2;
+		answersCol1.appendChild(answerB);
+
+		//answers row C and D
+		const answersCol2 = document.createElement('div');
+		answersCol2.className = 'd-flex justify-content-around';
+		answers.appendChild(answersCol2);
+
+		//answer C
+		const answerC = document.createElement('div');
+		answerC.className = 'btn btn-purple';
+		answerC.textContent = randomQuestions[0].answer3;
+		answersCol2.appendChild(answerC);
+
+		//answer D
+		const answerD = document.createElement('div');
+		answerD.className = 'btn btn-purple';
+		answerD.textContent = randomQuestions[0].answer4;
+		answersCol2.appendChild(answerD);
 
 		questionsContainer.appendChild(questionBox);
 
@@ -36,12 +72,12 @@ async function displayQuestion() {
 			//box
 			const questionBox = document.createElement('div');
 			questionBox.className = 'carousel-item';
-			questionBox.setAttribute('data-bs-interval', '2000');
-			questionBox.setAttribute('data-bs-pause', 'false');
+			questionBox.setAttribute('data-bs-interval', '15000');
+			questionBox.setAttribute('data-bs-pause', false);
 
 			//slide
 			const question = document.createElement('div');
-			question.className = 'question d-block w-100';
+			question.className = 'd-block question position-relative';
 			questionBox.appendChild(question);
 
 			//title
@@ -49,6 +85,45 @@ async function displayQuestion() {
 			titleQuestion.className = 'title-question';
 			titleQuestion.textContent = randomQuestions[i].question;
 			question.appendChild(titleQuestion);
+
+			//answers box
+			const answers = document.createElement('div');
+			answers.className = 'answers';
+			question.appendChild(answers);
+
+			//answers row A and B
+			const answersCol1 = document.createElement('div');
+			answersCol1.className = 'd-flex justify-content-around';
+			answers.appendChild(answersCol1);
+
+			//answer A
+			const answerA = document.createElement('div');
+			answerA.className = 'btn btn-purple';
+			answerA.textContent = randomQuestions[i].answer1;
+			answersCol1.appendChild(answerA);
+
+			//answer B
+			const answerB = document.createElement('div');
+			answerB.className = 'btn btn-purple';
+			answerB.textContent = randomQuestions[i].answer2;
+			answersCol1.appendChild(answerB);
+
+			//answers row C and D
+			const answersCol2 = document.createElement('div');
+			answersCol2.className = 'd-flex justify-content-around';
+			answers.appendChild(answersCol2);
+
+			//answer C
+			const answerC = document.createElement('div');
+			answerC.className = 'btn btn-purple';
+			answerC.textContent = randomQuestions[i].answer3;
+			answersCol2.appendChild(answerC);
+
+			//answer D
+			const answerD = document.createElement('div');
+			answerD.className = 'btn btn-purple';
+			answerD.textContent = randomQuestions[i].answer4;
+			answersCol2.appendChild(answerD);
 
 			questionsContainer.appendChild(questionBox);
 		}
