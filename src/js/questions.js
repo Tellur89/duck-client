@@ -1,9 +1,9 @@
-import pickRandom from './pickRandom.js';
-// import displayRandomQ from './displayRandomQ';
+const { pickRandom } = require('./pickRandom');
+// import pickRandom from './pickRandom';
 
 async function displayQuestion() {
 	try {
-		const res = await fetch('http://localhost:3000/questions/category'); //replace history with the value of the clicked button on category page
+		const res = await fetch('http://localhost:3000/questions/history'); //replace history with the value of the clicked button on category page
 		const questions = await res.json();
 		// console.log(questions);
 
@@ -154,4 +154,4 @@ async function displayQuestion() {
 	}
 }
 
-displayQuestion();
+module.exports = { displayQuestion };
