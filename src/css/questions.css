@@ -70,7 +70,8 @@
 	background-color: rgb(135, 1, 241, 100%);
 }
 
-.btn-purple {
+.btn-purple,
+#btnAnswer {
 	width: 6rem;
 	height: 3rem;
 	color: white;
@@ -80,4 +81,11 @@
 	position: absolute;
 	bottom: 4.5rem;
 	right: 11rem;
+}
+
+.questions-num {
+	position: absolute;
+	font-size: 2rem;
+	bottom: 4.5rem;
+	left: 11rem;
 }

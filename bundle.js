@@ -57,13 +57,15 @@ async function displayQuestion() {
 
 		//answer A
 		const answerA = document.createElement('div');
-		answerA.className = 'btn btn-purple';
+		answerA.className = 'btn btn-purple btn-answer';
+		answerA.id = 'btnAnswer';
 		answerA.textContent = randomQuestions[0].answer1;
 		answersCol1.appendChild(answerA);
 
 		//answer B
 		const answerB = document.createElement('div');
-		answerB.className = 'btn btn-purple';
+		answerB.className = 'btn btn-purple btn-answer';
+		answerB.id = 'btnAnswer';
 		answerB.textContent = randomQuestions[0].answer2;
 		answersCol1.appendChild(answerB);
 
@@ -74,13 +76,15 @@ async function displayQuestion() {
 
 		//answer C
 		const answerC = document.createElement('div');
-		answerC.className = 'btn btn-purple';
+		answerC.className = 'btn btn-purple btn-answer';
+		answerC.id = 'btnAnswer';
 		answerC.textContent = randomQuestions[0].answer3;
 		answersCol2.appendChild(answerC);
 
 		//answer D
 		const answerD = document.createElement('div');
-		answerD.className = 'btn btn-purple';
+		answerD.className = 'btn btn-purple btn-answer';
+		answerD.id = 'btnAnswer';
 		answerD.textContent = randomQuestions[0].answer4;
 		answersCol2.appendChild(answerD);
 
@@ -117,13 +121,15 @@ async function displayQuestion() {
 
 			//answer A
 			const answerA = document.createElement('div');
-			answerA.className = 'btn btn-purple';
+			answerA.className = 'btn btn-purple btn-answer';
+			answerA.id = 'btnAnswer';
 			answerA.textContent = randomQuestions[i].answer1;
 			answersCol1.appendChild(answerA);
 
 			//answer B
 			const answerB = document.createElement('div');
-			answerB.className = 'btn btn-purple';
+			answerB.className = 'btn btn-purple btn-answer';
+			answerB.id = 'btnAnswer';
 			answerB.textContent = randomQuestions[i].answer2;
 			answersCol1.appendChild(answerB);
 
@@ -134,26 +140,27 @@ async function displayQuestion() {
 
 			//answer C
 			const answerC = document.createElement('div');
-			answerC.className = 'btn btn-purple';
+			answerC.className = 'btn btn-purple btn-answer';
+			answerC.id = 'btnAnswer';
 			answerC.textContent = randomQuestions[i].answer3;
 			answersCol2.appendChild(answerC);
 
 			//answer D
 			const answerD = document.createElement('div');
-			answerD.className = 'btn btn-purple';
+			answerD.className = 'btn btn-purple btn-answer';
+			answerD.id = 'btnAnswer';
 			answerD.textContent = randomQuestions[i].answer4;
 			answersCol2.appendChild(answerD);
 
 			questionsContainer.appendChild(questionBox);
 		}
 
+		//TIMER
 		let index = 0;
 		let timer;
 		const nextBtn = document.getElementById('btn-next');
-
 		function startTimer() {
 			const timerBtn = document.getElementById('timer');
-
 			let timeMax = 15;
 			timerBtn.textContent = `Time left: ${timeMax}s`;
 			timer = setInterval(function () {
@@ -168,13 +175,19 @@ async function displayQuestion() {
 					}
 				}
 				if (index === randomQuestions.length) {
-					window.location.href = '../completed.html';
+					window.location.href = '../../src/completed.html';
 				}
 			}, 1000);
+
+			// CREATE NUMBER OF QUESTIONS
+			const questionsNum = document.getElementById('questionsNum');
+			questionsNum.className = 'questions-num';
+			questionsNum.textContent = `${index + 1} / ${randomQuestions.length}`;
 		}
 
 		startTimer();
 
+		// NEXT BUTTON
 		nextBtn.addEventListener('click', function () {
 			index++;
 			if (index < randomQuestions.length) {
@@ -182,6 +195,12 @@ async function displayQuestion() {
 				startTimer();
 			}
 		});
+
+		const btnAnswer = document.getElementById('btnAnswer');
+		btnAnswer.addEventListener('click', function () {
+			console.log('clicked');
+		});
+		console.log(randomQuestions[0].ansIndex);
 	} catch (err) {
 		console.log(err);
 	}
