@@ -4,8 +4,10 @@
 @import url('welcome.css');
 @import url('rules.css');
 @import url('leaderboard.css');
+@import url("completed.css");
 /* Google Font  */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;1000&display=swap');
+
 
 * {
   box-sizing: border-box;
