@@ -64,17 +64,13 @@
 .btn-purple {
 	background-color: rgb(52, 3, 101, 70%);
 	font-size: 1.8rem;
+	width: 6rem;
+	height: 3rem;
+	color: white;
 }
 
 .btn-purple:hover {
 	background-color: rgb(135, 1, 241, 100%);
-}
-
-.btn-purple,
-#btnAnswer {
-	width: 6rem;
-	height: 3rem;
-	color: white;
 }
 
 #btn-next {

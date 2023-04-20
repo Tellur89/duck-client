@@ -184,6 +184,7 @@ async function displayQuestion() {
 		btnAnswer.addEventListener('click', function () {
 			console.log('clicked');
 		});
+
 		console.log(randomQuestions[0].ansIndex);
 	} catch (err) {
 		console.log(err);
