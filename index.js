@@ -1,5 +1,4 @@
-// const displayQuestion = require('./src/js/questions');
+const { displayQuestion } = require('./src/js/questions.js');
+// import displayQuestion from './src/questions.html';
 
-function hello() {
-	console.log('hello world!');
-}
+displayQuestion();
