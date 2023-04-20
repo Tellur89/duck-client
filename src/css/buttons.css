@@ -1,35 +1,45 @@
 /* White button */
 .btn-container .button {
-    background-color: #FFFFFF;
-    color: #8701F1;
-    width: 20rem;
-    margin: 2rem;
-    height: 7rem;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    transition: all .3s ease-in-out 0s;
+  background-color: #ffffff;
+  color: #8701f1;
+  width: 20rem;
+  margin: 2rem;
+  height: 8rem;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 5px 5px rgb(0, 0, 0, 25%);
 }
+/* .button {
+  box-shadow: 5px 5px rgb(0, 0, 0, 25%);
+  /* box-shadow: 10px 20px rgb(102 0 193); 
+} */
 .btn-container h6 {
-    font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 900;
 }
 .btn-container a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.btn-containers .btn-container .button:hover {
+  background-color: #ffd256;
 }
 .btn-container .button:hover {
-    background-color: #d4d4d4;
-    color: #9305ff;
-    transform: translateY(-10%);
-    -webkit-transform: translateY(-10%);
-    -moz-transform: translateY(-10%);
-    -ms-transform: translateY(-10%);
-    -o-transform: translateY(-10%);
+  background-color: #d4d4d4;
+  color: #9305ff;
+  transform: translateY(-10%);
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  -o-transform: translateY(-10%);
 }
 /* HTML for white button 
 					<div class="btn-container">
@@ -44,25 +54,23 @@
 					</div>
 */
 
-
 /*Responsive on main landing page */
 @media only screen and (max-width: 900px) {
   .btn-container .button {
-        width: 20rem;
-        height: 6rem;
-    }
-    .btn-container h6 {
-        font-size: 2.5rem;
-    }
+    width: 20rem;
+    height: 6rem;
+  }
+  .btn-container h6 {
+    font-size: 2.5rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-
-    .btn-container .button {
-        width: 16rem;
-        height: 5rem;
-    }
-    .btn-container h6 {
-        font-size: 2rem;
-    }
+  .btn-container .button {
+    width: 16rem;
+    height: 5rem;
+  }
+  .btn-container h6 {
+    font-size: 2rem;
+  }
 }
