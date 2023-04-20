@@ -1,14 +1,15 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const { getCategories } = require('./src/js/landing.js');
+const {btnUrl } = require('./src/js/temp.js');
 const { displayQuestion } = require('./src/js/questions.js');
 
 // import displayQuestion from './src/questions.html';
 
-getCategories();
+btnUrl();
 displayQuestion();
 
 
-},{"./src/js/landing.js":3,"./src/js/questions.js":5}],2:[function(require,module,exports){
+},{"./src/js/landing.js":3,"./src/js/questions.js":5,"./src/js/temp.js":6}],2:[function(require,module,exports){
 const capitalize = (word) => {
     let str = word.toLowerCase();
     let capitalizedWord = str.charAt(0).toUpperCase() + str.slice(1);
@@ -29,28 +30,33 @@ function getCategories(){
 		fetch(url)
 		.then(resp => resp.json())
 		.then(data => {
-			//Grab categories and make buttons for each category with a first capital letter
-				for(const dataCats in data){
-					let categoryEl = document.querySelector('.row');
-					const categoryBtn = 
-					`
-						<div class="col">
-							<section class="georgraphy-section">
-								<a href='../questions.html'>
-									<div class="button">
-										<h6>${capitalize(dataCats)}</h6>
-										<img src="./img/icons/earthIcon.png" alt="Earth icon">
-									</div>
-								</a>
-							</section>
-						</div>
-					`
-					categoryEl.insertAdjacentHTML("beforeend",categoryBtn);
-				}
-			})
+			temp(data);
+			})	
 	}
 	catch (err) {
 		console.log(err);
+	}
+}
+
+function temp (data) 
+{
+	for(const dataCats in data){
+		let categoryEl = document.querySelector('.row');
+		const categoryBtn = 
+		`
+			<div class="col">
+				<section class="georgraphy-section">
+					<a href='./questions.html'>
+						<div class="button">
+							<h6>${capitalize(dataCats)}</h6>
+							<img src="./img/icons/earthIcon.png" alt="Earth icon">
+						</div>
+					</a>
+				</section>
+			</div>
+		`
+		categoryEl.insertAdjacentHTML("beforeend",categoryBtn);
+		return dataCats
 	}
 }
 
@@ -238,4 +244,14 @@ async function displayQuestion() {
 
 module.exports = { displayQuestion };
 
-},{"./pickRandom":4}]},{},[1]);
+},{"./pickRandom":4}],6:[function(require,module,exports){
+const { getCategories } = require('./landing');
+
+getCategories();
+function btnUrl() {
+    return
+}
+
+module.exports = {btnUrl}
+
+},{"./landing":3}]},{},[1]);
