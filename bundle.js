@@ -1,10 +1,62 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCategories } = require('./src/js/landing.js');
 const { displayQuestion } = require('./src/js/questions.js');
+
 // import displayQuestion from './src/questions.html';
 
+getCategories();
 displayQuestion();
 
-},{"./src/js/questions.js":3}],2:[function(require,module,exports){
+
+},{"./src/js/landing.js":3,"./src/js/questions.js":5}],2:[function(require,module,exports){
+const capitalize = (word) => {
+    let str = word.toLowerCase();
+    let capitalizedWord = str.charAt(0).toUpperCase() + str.slice(1);
+    return capitalizedWord
+}
+
+module.exports = {capitalize}
+
+},{}],3:[function(require,module,exports){
+const { capitalize } = require('./capitilize');
+
+const url = 'http://localhost:3000/questions/';
+
+
+function getCategories(){
+	try {
+		//Fetch question categories 
+		fetch(url)
+		.then(resp => resp.json())
+		.then(data => {
+			//Grab categories and make buttons for each category with a first capital letter
+				for(const dataCats in data){
+					let categoryEl = document.querySelector('.row');
+					const categoryBtn = 
+					`
+						<div class="col">
+							<section class="georgraphy-section">
+								<a href='../questions.html'>
+									<div class="button">
+										<h6>${capitalize(dataCats)}</h6>
+										<img src="./img/icons/earthIcon.png" alt="Earth icon">
+									</div>
+								</a>
+							</section>
+						</div>
+					`
+					categoryEl.insertAdjacentHTML("beforeend",categoryBtn);
+				}
+			})
+	}
+	catch (err) {
+		console.log(err);
+	}
+}
+
+module.exports = { getCategories };
+
+},{"./capitilize":2}],4:[function(require,module,exports){
 function pickRandom(arr, num) {
 	const shuffled = [...arr].sort(() => 0.5 - Math.random());
 
@@ -13,7 +65,7 @@ function pickRandom(arr, num) {
 
 module.exports = { pickRandom };
 
-},{}],3:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 const { pickRandom } = require('./pickRandom');
 // import pickRandom from './pickRandom';
 
@@ -186,4 +238,4 @@ async function displayQuestion() {
 
 module.exports = { displayQuestion };
 
-},{"./pickRandom":2}]},{},[1]);
+},{"./pickRandom":4}]},{},[1]);

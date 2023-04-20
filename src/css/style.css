@@ -1,28 +1,33 @@
-@import url("landing.css");
-@import url("buttons.css");
-@import url("questions.css");
-@import url("welcome.css");
-@import url("rules.css");
-@import url("leaderboard.css");
+@import url('landing.css');
+@import url('buttons.css');
+@import url('questions.css');
+@import url('welcome.css');
+@import url('rules.css');
+@import url('leaderboard.css');
 @import url("completed.css");
+/* Google Font  */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;1000&display=swap');
+
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-*,
+/* *,
 *:before,
 *:after {
-	box-sizing: inherit;
-}
+  box-sizing: inherit;
+} */
 html,
 body {
-	font-family: 'Proza Libre', sans-serif;
-	font-weight: 400;
-	font-size: 62.5%;
-	max-width: 100vw;
-	max-height: 100vh;
-	background-image: url('../img/background.jpg');
-    background-size: cover;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/src/img/Background\ \(1\).png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
