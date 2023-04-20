@@ -4,7 +4,7 @@
 	"description": "SmartDuck",
 	"main": "index.js",
 	"scripts": {
-		"dev": "live-server",
+		"dev": "concurrently \"watchify index.js -o bundle.js\" \"live-server\"",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
