@@ -1,5 +1,6 @@
-h1 {
+.welcome {
   font-weight: 900;
+  font-size: 7rem;
 }
 
 /* .main-container {
