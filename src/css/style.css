@@ -4,10 +4,10 @@
 @import url('welcome.css');
 @import url('rules.css');
 @import url('leaderboard.css');
-@import url("completed.css");
+@import url('completed.css');
+@import url('login.css');
 /* Google Font  */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;1000&display=swap');
-
 
 * {
   box-sizing: border-box;
@@ -18,14 +18,14 @@
 *:before,
 *:after {
   box-sizing: inherit;
-} 
+}
 html,
 body {
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
   font-size: 62.5%;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('/src/img/Background\ \(1\).png');
   background-size: cover;
   background-position: center;
