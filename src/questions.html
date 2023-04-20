@@ -21,30 +21,21 @@
 
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/questions.css" />
-		<script defer src="./index.js"></script>
+
+		<!-- <script type="module" defer src="./index.js"></script> -->
+		<script type="module" defer src="./js/timer.js"></script>
+		<script type="module" defer src="./js/questions.js"></script>
 		<title>SmartDuck - questions</title>
 	</head>
 	<body class="body-center">
-		<section class="container container-questions">
+		<section id="carouselQuestion" class="container container-questions carousel slide" data-bs-ride="carousel" data-bs-pause="false">
 			<div class="timer" id="timer">Time left: 15s</div>
 
-			<div id="question" class="question">
-				<div class="title-question" id="title-question"><div>Question</div></div>
-				<div id="answers" class="answers">
-					<div class="d-flex">
-						<div class="btn btn-purple" id="answer-1">A</div>
-						<div class="btn btn-purple" id="answer-2">B</div>
-					</div>
-					<div class="d-flex">
-						<div class="btn btn-purple" id="answer-3">C</div>
-						<div class="btn button" id="answer-4">D</div>
-					</div>
-				</div>
-				<div class="footer-question" id="footer-question">
-					<div id="number-questions"></div>
-					<button class="btn btn-white">Next</button>
-				</div>
-			</div>
+			<div class="carousel-inner"></div>
+
+			<button class="btn button" id="btn-next" type="button" data-bs-target="#carouselQuestion" data-bs-slide="next"><span>Next</span></button>
 		</section>
+
+		<!-- <script src="./js/slider.js"></script> -->
 	</body>
 </html>
