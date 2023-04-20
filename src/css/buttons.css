@@ -33,7 +33,7 @@
   background-color: #ffd256;
 }
 .btn-container .button:hover {
-  background-color: #d4d4d4;
+  background-color: #ffd256;
   color: #9305ff;
   transform: translateY(-10%);
   -webkit-transform: translateY(-10%);
