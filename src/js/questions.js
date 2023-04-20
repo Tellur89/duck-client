@@ -132,23 +132,37 @@ async function displayQuestion() {
 		}
 
 		let index = 0;
+		let timer;
+		const nextBtn = document.getElementById('btn-next');
 
 		function startTimer() {
+			const timerBtn = document.getElementById('timer');
+
 			let timeMax = 15;
-			const timer = setInterval(function () {
+			timerBtn.textContent = `Time left: ${timeMax}s`;
+			timer = setInterval(function () {
 				timeMax--;
-				document.getElementById('timer').textContent = `Time left: ${timeMax}s`;
-				if (timeMax === 0) {
+				timerBtn.textContent = `Time left: ${timeMax}s`;
+				if (timeMax <= 0) {
 					clearInterval(timer);
 					index++;
 					if (index < randomQuestions.length) {
 						startTimer();
+						nextBtn.disabled = true;
 					}
 				}
 			}, 1000);
 		}
 
 		startTimer();
+
+		nextBtn.addEventListener('click', function () {
+			index++;
+			if (index < randomQuestions.length) {
+				clearInterval(timer);
+				startTimer();
+			}
+		});
 	} catch (err) {
 		console.log(err);
 	}
