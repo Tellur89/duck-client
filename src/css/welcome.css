@@ -3,10 +3,9 @@
   font-size: 7rem;
 }
 
-/* .main-container {
+ .main-container {
   overflow: hidden;
-} */
-/* changed */
+} 
 .main-title {
   display: flex;
   justify-content: center;
