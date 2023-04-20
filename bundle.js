@@ -167,6 +167,9 @@ async function displayQuestion() {
 						nextBtn.disabled = true;
 					}
 				}
+				if (index === randomQuestions.length) {
+					window.location.href = '../completed.html';
+				}
 			}, 1000);
 		}
 
