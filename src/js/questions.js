@@ -106,7 +106,6 @@ async function displayQuestion() {
 			answerButtons.forEach((button) => {
 				button.classList.remove('selected');
 				button.style.backgroundColor = '';
-				// button.innerHTML = '';
 			});
 		}
 		findAnswer();
@@ -114,5 +113,5 @@ async function displayQuestion() {
 		console.log(err);
 	}
 }
-
+// displayQuestion();
 module.exports = { displayQuestion };
