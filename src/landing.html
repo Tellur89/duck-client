@@ -14,9 +14,8 @@
 
 
 		<link rel="stylesheet" href="./css/style.css" />
-		<script defer src="./index.js"></script>
+		<script defer src="../bundle.js"></script>
 
-		<script defer src="./js/landing.js"></script>
 		<title>SmartDuck</title>
 	</head>
 	<body>
@@ -45,14 +44,29 @@
 
 			<h2 class="secondary-title">Pick a category</h2>
 			<div class="container categories ">
-
-				<!-- PLCEHOLDERS - They need pulling and creating from JS -->
 				<div class="row">
-					
+					<div class="col">
+						<section>
+							<a href='./questions.html'>
+								<button class="button" value="geography" onClick='btnUrl()'>
+									<h6 id="btn"> Geography </h6>
+									<img src="./img/icons/earthIcon.png" alt="Earth icon">
+								</button>
+							</a>
+						</section>
+					</div>
+					<div class="col">
+						<section>
+							<a href='./questions.html'>
+								<button class="button" value="History" onClick='btnUrl()'>
+									<h6 id="btn"> History </h6>
+									<img src="./img/icons/historyIcon.png" alt="History icon">
+								</button>
+							</a>
+						</section>
+					</div>
 				</div>
 			</div>
-
-
 		</main>
 	</body>
 </html>

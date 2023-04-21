@@ -1,33 +1,43 @@
+/*
+const { capitalize } = require('./capitilize');
+
 const url = 'http://localhost:3000/questions/';
 
-fetch(url)
-.then(resp => resp.json())
-.then(data => 
-    {
-        for(const dataCats in data)
-        {
-            console.log(dataCats)
-        }
-    })
-.catch(err => console.log(err));
 
-function getCategories()
-{
+async function getCategories(){
+	try {
+			const response = await fetch(url);
+			const categories = await response.json();
 
+			for(const dataCats in categories){
+				let categoryEl = document.querySelector('.row');
+				const categoryBtn = 
+				`
+					<div class="col">
+						<section>
+							<a href='./questions.html'>
+								<button class="button" value='${dataCats}' onClick='btnUrl()'>
+									<h6 id="btn">${capitalize(dataCats)}</h6>
+									<img src="./img/icons/earthIcon.png" alt="Earth icon">
+								</button>
+							</a>
+						</section>
+					</div>
+				`
+				categoryEl.insertAdjacentHTML("beforeend",categoryBtn);
+			}
+		}	
+	catch (err) {
+		console.log(err);
+	}
 }
-
-getCategories();
-
-/* 
-<div class="col">
-	<section class="georgraphy-section">
-		<a href=#>
-			<div class="button">
-				<h6>Geography</h6>
-				<img src="./img/icons/earthIcon.png" alt="Earth icon">
-			</div>
-		</a>
-	</section>
-</div>
 */
+function btnUrl() {
+    const btn = document.getElementById('#btn');
+    console.log(btn)
+}
+btnUrl();
+
+
+/*module.exports = { getCategories };*/
 

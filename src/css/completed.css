@@ -1,0 +1,39 @@
+
+.container-completed-page{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: 10rem;
+    width: 70%;
+	background-color: rgb(221, 139, 235, 10%);
+    box-shadow: 10px 20px rgb(102 0 193);
+	color: white;
+    margin-bottom: 4rem;
+    border: 1px solid white;
+    padding: 2rem;
+}
+
+.completed-header {
+    margin-top: 2rem;
+    animation: none;
+    -webkit-animation: none;
+}
+
+.completed-btns-container .btn-container .button:hover{
+    background-color: #FFD256;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.cup {
+    margin: 2rem;
+    height: auto;
+    width: 40%;
+}
