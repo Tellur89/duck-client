@@ -1,14 +1,59 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 //const { getCategories } = require('./src/js/landing.js');
-const { displayQuestion } = require('./src/js/questions.js');
 // import displayQuestion from './src/questions.html';
+const { displayQuestion } = require('./src/js/questions.js');
+const { btnUrl } = require('./src/js/landing.js');
 
-
-//getCategories();
 displayQuestion();
+btnUrl;
+// displayQuestion;
+// btnUrl();
+
+},{"./src/js/landing.js":2,"./src/js/questions.js":4}],2:[function(require,module,exports){
+/*
+const { capitalize } = require('./capitilize');
+
+const url = 'http://localhost:3000/questions/';
 
 
-},{"./src/js/questions.js":3}],2:[function(require,module,exports){
+async function getCategories(){
+	try {
+			const response = await fetch(url);
+			const categories = await response.json();
+
+			for(const dataCats in categories){
+				let categoryEl = document.querySelector('.row');
+				const categoryBtn = 
+				`
+					<div class="col">
+						<section>
+							<a href='./questions.html'>
+								<button class="button" value='${dataCats}' onClick='btnUrl()'>
+									<h6 id="btn">${capitalize(dataCats)}</h6>
+									<img src="./img/icons/earthIcon.png" alt="Earth icon">
+								</button>
+							</a>
+						</section>
+					</div>
+				`
+				categoryEl.insertAdjacentHTML("beforeend",categoryBtn);
+			}
+		}	
+	catch (err) {
+		console.log(err);
+	}
+}
+*/
+function btnUrl() {
+	const btn = document.querySelectorAll('#btn');
+	for (i = 0; i < btn.length; i++) {
+		console.log(btn.value);
+	}
+}
+
+// module.exports = { btnUrl };
+
+},{}],3:[function(require,module,exports){
 function pickRandom(arr, num) {
 	const shuffled = [...arr].sort(() => 0.5 - Math.random());
 
@@ -17,7 +62,7 @@ function pickRandom(arr, num) {
 
 module.exports = { pickRandom };
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 const { pickRandom } = require('./pickRandom');
 // import pickRandom from './pickRandom';
 
@@ -126,7 +171,6 @@ async function displayQuestion() {
 			answerButtons.forEach((button) => {
 				button.classList.remove('selected');
 				button.style.backgroundColor = '';
-				// button.innerHTML = '';
 			});
 		}
 		findAnswer();
@@ -134,7 +178,7 @@ async function displayQuestion() {
 		console.log(err);
 	}
 }
-
+// displayQuestion();
 module.exports = { displayQuestion };
 
-},{"./pickRandom":2}]},{},[1]);
+},{"./pickRandom":3}]},{},[1]);

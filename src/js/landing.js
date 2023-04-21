@@ -33,11 +33,10 @@ async function getCategories(){
 }
 */
 function btnUrl() {
-    const btn = document.getElementById('#btn');
-    console.log(btn)
+	const btn = document.querySelectorAll('#btn');
+	for (i = 0; i < btn.length; i++) {
+		console.log(btn.value);
+	}
 }
-btnUrl();
 
-
-/*module.exports = { getCategories };*/
-
+// module.exports = { btnUrl };
