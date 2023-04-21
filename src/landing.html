@@ -28,41 +28,52 @@
     <title>SmartDuck</title>
   </head>
   <body>
-    <main class="landing-container">
+    <div class="landing-btns-container">
+      <div class="btn-container">
+        <a href="../index.html">
+          <div class="button">
+            <h6><<< Home</h6>
+          </div>
+        </a>
+      </div>
+      <div class="btn-container">
+        <a href="./rules.html">
+          <div class="button">
+            <h6>Rules</h6>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <main class="main-container">
       <div class="main-title">
         <h1>Let's Play</h1>
+        <h5>Come and study with us</h5>
       </div>
 
       <h2 class="secondary-title">Pick a category</h2>
       <div class="container categories">
-        <div class="row"></div>
-      </div>
-      <div class="categories-containers">
-        <div class="category geography">
-          <img src="/src/img/global.png" class="image global" />
-          <h2 class="category-name">Geography</h2>
-        </div>
-        <div class="category history">
-          <div>
-            <img src="/src/img/book.png" class="image book" />
-            <h2 class="category-name">History</h2>
+        <div class="row">
+          <div class="col">
+            <section>
+              <a href="./questions.html">
+                <button class="button" value="geography" onClick="btnUrl()">
+                  <h6 id="btn">Geography</h6>
+                  <img src="./img/icons/earthIcon.png" alt="Earth icon" />
+                </button>
+              </a>
+            </section>
           </div>
-        </div>
-      </div>
-      <div class="btn-containers-category">
-        <div class="btn-container">
-          <a href="/index.html">
-            <div class="button">
-              <h6>Home</h6>
-            </div>
-          </a>
-        </div>
-        <div class="btn-container">
-          <a href="../src/rules.html">
-            <div class="button">
-              <h6>Rules</h6>
-            </div>
-          </a>
+          <div class="col">
+            <section>
+              <a href="./questions.html">
+                <button class="button" value="History" onClick="btnUrl()">
+                  <h6 id="btn">History</h6>
+                  <img src="./img/icons/historyIcon.png" alt="History icon" />
+                </button>
+              </a>
+            </section>
+          </div>
         </div>
       </div>
     </main>
