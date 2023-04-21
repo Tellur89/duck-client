@@ -21,6 +21,15 @@
 }
 html,
 body {
+
+	font-family: 'Proza Libre', sans-serif;
+	font-weight: 400;
+	font-size: 62.5%;
+	max-width: 100vw;
+	max-height: 100vh;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
   font-size: 62.5%;
@@ -29,6 +38,7 @@ body {
   background-image: url('/src/img/Background\ \(1\).png');
   background-size: cover;
   background-position: center;
+
 }
 
 /* logo */

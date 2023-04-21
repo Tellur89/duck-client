@@ -62,12 +62,23 @@
   width: 100%;
 }
 
+
 .btn-purple {
   background-color: rgb(52, 3, 101, 70%);
   font-size: 1.8rem;
   width: 6rem;
   height: 3rem;
   color: white;
+
+.btn-answer {
+	background-color: rgb(52, 3, 101, 70%);
+
+	/* background-color: red; */
+	font-size: 1.8rem !important;
+	width: 40% !important;
+	height: 4rem !important;
+	color: white;
+
 }
 
 .btn-purple:hover {
