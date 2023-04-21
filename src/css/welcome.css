@@ -1,81 +1,102 @@
-.main-container {
-    overflow: hidden;
+.welcome {
+  font-weight: 900;
+  font-size: 7rem;
+}
+
+ .main-container {
+  overflow: hidden;
+} 
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .icons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .arrowIcon {
-    width: 10rem;
-    height: 10rem;
-    animation: 1s jump infinite;
-    -webkit-animation: 1s jump infinite;
+  width: 10rem;
+  height: 10rem;
+  animation: 1s jump infinite;
+  -webkit-animation: 1s jump infinite;
+  padding-bottom: 38px;
 }
 
-.duckImg{
-    margin-left: -6rem;
-    width: 30rem;
-    height: 30rem;
-    transition: all .3s ease-in-out 0s;
+.duckImg {
+  margin-left: -6rem;
+  width: 30rem;
+  height: 30rem;
+  transition: all 0.3s ease-in-out 0s;
 }
 
-.duckImg:hover{
-    transform: translateY(10%);
-    -webkit-transform: translateY(10%);
-    -moz-transform: translateY(10%);
-    -ms-transform: translateY(10%);
-    -o-transform: translateY(10%);
+.duckImg:hover {
+  transform: translateY(10%);
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  -o-transform: translateY(10%);
 }
 
 @keyframes jump {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
-
 @media only screen and (max-width: 900px) {
-    h1 {
-        font-size: 5rem;
-    }
-    .main-title h5 {
-        font-size: 2.5rem;
-    }
-    .secondary-title {
-        font-size: 2.4rem;
+  h1 {
+    font-size: 5rem;
+  }
+  .main-title h5 {
+    font-size: 2.5rem;
+  }
+  .secondary-title {
+    font-size: 2.4rem;
   }
   .arrowIcon {
     width: 8rem;
     height: 8rem;
-}
+  }
 
-.duckImg{
+  .duckImg {
     width: 25rem;
     height: 25rem;
-}
-}
-
-  @media only screen and (max-width: 400px) {
-    h1 {
-        font-size: 3rem;
-    }
-    .main-title h5 {
-        font-size: 2rem;
-}
-    .secondary-title {
-        font-size: 1.8rem;
-    }
-    .arrowIcon {
-        width: 6rem;
-        height: 6rem;
-    }
-    
-    .duckImg{
-        width: 20rem;
-        height: 20rem;
-    }
+  }
 }
 
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .main-title h5 {
+    font-size: 2rem;
+  }
+  .secondary-title {
+    font-size: 1.8rem;
+  }
+  .arrowIcon {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .duckImg {
+    width: 20rem;
+    height: 20rem;
+  }
+}
