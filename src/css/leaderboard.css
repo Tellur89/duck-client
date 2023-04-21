@@ -1,117 +1,95 @@
-/* .leaderboard-title {
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  height: 10%;
-  color: black;
-  margin-top: 6rem;
-  padding: 5rem 4rem 5rem 4rem;
-  z-index: 1;
-} */
-
+.leaderboard-title {
+    background-color: white;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    height: 10%;
+    color: black;
+    margin-top: 6rem;
+    padding: 5rem 4rem 5rem 4rem;
+    z-index: 1;
+}
 .title {
-  animation: none;
-  -webkit-animation: None;
-  letter-spacing: 0.1rem;
-  font-size: 7rem;
-  position: relative;
-  top: 20px;
+    animation: none;
+    -webkit-animation: None;
+    margin: 0;
+    letter-spacing: 0.1rem;
 }
-.container-leaderboard-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 80vw;
-  max-height: 160vh;
-  background-color: rgb(221, 139, 235, 10%);
-  box-shadow: 10px 20px rgb(102 0 193);
-  color: white;
-  margin-bottom: 4rem;
-  padding-top: 14rem;
-  margin-top: -10rem;
-  padding-bottom: 4rem;
-}
-
-.leaderboard-scroll {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 40vw;
-  height: 40vh;
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  scrollbar-width: thin;
-}
-.leaderboard-scroll::-webkit-scrollbar-thumb {
-  background: #ffd256;
-  border-radius: 3px;
-  height: 2vh;
-}
-
-.leaderboard-scroll::-webkit-scrollbar {
-  background: #ffff;
-  border-radius: 3px;
+.container-leaderboard-page{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: 10rem;
+    width: 60%;
+	background-color: rgb(255, 255, 255, 30%);
+	color: white;
+    margin-bottom: 4rem;
+    border: 1px solid white;
+    padding-top: 14rem;
+    margin-top: -10rem;
+    padding-bottom: 4rem;
 }
 
 .leader-board {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem;
-  background-color: #ffff;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  padding: 1rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+    background-color: #340365;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 1rem;
 }
 
+.leader-board h2 {
+    font-size: 3rem;
+}
 .leader-board p {
-  font-size: 2.5rem;
-  color: #8701f1;
-  font-weight: 900;
+    font-size: 2.5rem;
 }
 
 .leaderboard-btns-container {
-  display: flex;
-  gap: 25px;
-  padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
 }
 
 @media only screen and (max-width: 900px) {
-  .leaderboard-btns-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    .leaderboard-btns-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .leaderboard-title {
+        padding: 4rem 3rem 4rem 3rem;
+    }
+    .title {
+        font-size: 4rem;
+    }
+    .leader-board h2 {
+        font-size: 1.9rem;
+    }
+    .leader-board p {
+        font-size: 1.5rem;
+    }
+    .container-leaderboard-page{
+        width: 80%;
+    }
   }
-  .leaderboard-title {
-    padding: 4rem 3rem 4rem 3rem;
-  }
-  .title {
-    font-size: 4rem;
-  }
-  .leader-board h2 {
-    font-size: 1.9rem;
-  }
-  .leader-board p {
-    font-size: 1.5rem;
-  }
-  .container-leaderboard-page {
-    width: 80%;
-  }
-}
+  
+  @media only screen and (max-width: 400px) {
 
-@media only screen and (max-width: 400px) {
-  .leaderboard-title {
-    padding: 3rem 2rem 3rem 2rem;
-  }
-  .title {
-    font-size: 4rem;
-  }
+    .leaderboard-title {
+        padding: 3rem 2rem 3rem 2rem;
+    }
+    .title {
+        font-size: 4rem;
+    }
 }
