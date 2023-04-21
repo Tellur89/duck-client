@@ -1,6 +1,4 @@
-.leaderboard-title {
-  background-color: white;
-  border-radius: 40px;
+/* .leaderboard-title {
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
@@ -10,27 +8,53 @@
   margin-top: 6rem;
   padding: 5rem 4rem 5rem 4rem;
   z-index: 1;
-}
+} */
+
 .title {
   animation: none;
   -webkit-animation: None;
-  margin: 0;
   letter-spacing: 0.1rem;
+  font-size: 7rem;
+  position: relative;
+  top: 20px;
 }
 .container-leaderboard-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
-  width: 60%;
-  background-color: rgb(255, 255, 255, 30%);
+  gap: 20px;
+  width: 80vw;
+  max-height: 80vh;
+  background-color: rgb(221, 139, 235, 10%);
+  box-shadow: 10px 20px rgb(102 0 193);
   color: white;
   margin-bottom: 4rem;
-  border: 1px solid white;
   padding-top: 14rem;
   margin-top: -10rem;
   padding-bottom: 4rem;
+}
+
+.leaderboard-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 40vw;
+  height: 40vh;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  scrollbar-width: thin;
+}
+.leaderboard-scroll::-webkit-scrollbar-thumb {
+  background: #ffd256;
+  border-radius: 3px;
+  height: 2vh;
+}
+
+.leaderboard-scroll::-webkit-scrollbar {
+  background: #ffff;
+  border-radius: 3px;
 }
 
 .leader-board {
@@ -39,7 +63,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 2rem;
-  background-color: #340365;
+  background-color: #ffff;
   border-radius: 40px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
@@ -48,17 +72,16 @@
   padding: 1rem;
 }
 
-.leader-board h2 {
-  font-size: 3rem;
-}
 .leader-board p {
   font-size: 2.5rem;
+  color: #8701f1;
+  font-weight: 900;
 }
 
 .leaderboard-btns-container {
   display: flex;
-  justify-content: space-between;
-  width: 84%;
+  gap: 25px;
+  padding-top: 10px;
 }
 
 @media only screen and (max-width: 900px) {

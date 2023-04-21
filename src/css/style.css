@@ -30,3 +30,10 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* logo */
+.logo {
+  padding: 20px 0px 0px 20px;
+  width: 15vw;
+  height: 5vh;
+}

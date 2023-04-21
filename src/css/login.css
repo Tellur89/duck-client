@@ -19,11 +19,16 @@
 }
 .input-username {
   width: 50rem;
-  height: 8rem;
+  height: 7rem;
   border-radius: 40px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
   outline: none;
+  font-size: 30px;
+  color: rgb(135, 1, 241, 100%);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
 }
