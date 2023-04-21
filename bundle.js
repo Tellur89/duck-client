@@ -21,150 +21,111 @@ async function displayQuestion() {
 	try {
 		const res = await fetch('http://localhost:3000/questions/history'); //replace history with the value of the clicked button on category page
 		const questions = await res.json();
-		// console.log(questions);
-
-		const questionsContainer = document.querySelector('.carousel-inner');
 		const randomQuestions = pickRandom(questions, 5); // specify how many question you want to see
-		// console.log(randomQuestions);
 
 		// DISPLAY ONLY FIRST QESTION
-		// box
-		const questionBox = document.createElement('div');
-		questionBox.className = 'carousel-item active';
-		questionBox.setAttribute('data-bs-interval', '15000');
-		questionBox.setAttribute('data-bs-pause', false);
-
-		//slide
-		const question = document.createElement('div');
-		question.className = 'd-block question position-relative';
-		questionBox.appendChild(question);
-
-		//question title
-		const titleQuestion = document.createElement('div');
-		titleQuestion.className = 'title-question';
+		const titleQuestion = document.getElementById('titleQuestion0');
 		titleQuestion.textContent = randomQuestions[0].question;
-		question.appendChild(titleQuestion);
-
-		//answers box
-		const answers = document.createElement('div');
-		answers.className = 'answers';
-		question.appendChild(answers);
-
-		//answers row A and B
-		const answersCol1 = document.createElement('div');
-		answersCol1.className = 'd-flex justify-content-around';
-		answers.appendChild(answersCol1);
-
-		//answer A
-		const answerA = document.createElement('div');
-		answerA.className = 'btn btn-purple';
+		console.log(randomQuestions[0].question);
+		const answerA = document.getElementById('btn-answerA0');
 		answerA.textContent = randomQuestions[0].answer1;
-		answersCol1.appendChild(answerA);
-
-		//answer B
-		const answerB = document.createElement('div');
-		answerB.className = 'btn btn-purple';
+		const answerB = document.getElementById('btn-answerB0');
 		answerB.textContent = randomQuestions[0].answer2;
-		answersCol1.appendChild(answerB);
-
-		//answers row C and D
-		const answersCol2 = document.createElement('div');
-		answersCol2.className = 'd-flex justify-content-around';
-		answers.appendChild(answersCol2);
-
-		//answer C
-		const answerC = document.createElement('div');
-		answerC.className = 'btn btn-purple';
+		const answerC = document.getElementById('btn-answerC0');
 		answerC.textContent = randomQuestions[0].answer3;
-		answersCol2.appendChild(answerC);
-
-		//answer D
-		const answerD = document.createElement('div');
-		answerD.className = 'btn btn-purple';
+		const answerD = document.getElementById('btn-answerD0');
 		answerD.textContent = randomQuestions[0].answer4;
-		answersCol2.appendChild(answerD);
-
-		questionsContainer.appendChild(questionBox);
 
 		// DISPLAY THE REST OF THE QUESTIONS
 		for (let i = 1; i < randomQuestions.length; i++) {
-			//box
-			const questionBox = document.createElement('div');
-			questionBox.className = 'carousel-item';
-			questionBox.setAttribute('data-bs-interval', '15000');
-			questionBox.setAttribute('data-bs-pause', false);
-
-			//slide
-			const question = document.createElement('div');
-			question.className = 'd-block question position-relative';
-			questionBox.appendChild(question);
-
-			//title
-			const titleQuestion = document.createElement('div');
-			titleQuestion.className = 'title-question';
+			const titleQuestion = document.getElementById('titleQuestion' + i);
 			titleQuestion.textContent = randomQuestions[i].question;
-			question.appendChild(titleQuestion);
-
-			//answers box
-			const answers = document.createElement('div');
-			answers.className = 'answers';
-			question.appendChild(answers);
-
-			//answers row A and B
-			const answersCol1 = document.createElement('div');
-			answersCol1.className = 'd-flex justify-content-around';
-			answers.appendChild(answersCol1);
-
-			//answer A
-			const answerA = document.createElement('div');
-			answerA.className = 'btn btn-purple';
+			const answerA = document.getElementById('btn-answerA' + i);
 			answerA.textContent = randomQuestions[i].answer1;
-			answersCol1.appendChild(answerA);
-
-			//answer B
-			const answerB = document.createElement('div');
-			answerB.className = 'btn btn-purple';
+			const answerB = document.getElementById('btn-answerB' + i);
 			answerB.textContent = randomQuestions[i].answer2;
-			answersCol1.appendChild(answerB);
-
-			//answers row C and D
-			const answersCol2 = document.createElement('div');
-			answersCol2.className = 'd-flex justify-content-around';
-			answers.appendChild(answersCol2);
-
-			//answer C
-			const answerC = document.createElement('div');
-			answerC.className = 'btn btn-purple';
+			const answerC = document.getElementById('btn-answerC' + i);
 			answerC.textContent = randomQuestions[i].answer3;
-			answersCol2.appendChild(answerC);
-
-			//answer D
-			const answerD = document.createElement('div');
-			answerD.className = 'btn btn-purple';
+			const answerD = document.getElementById('btn-answerD' + i);
 			answerD.textContent = randomQuestions[i].answer4;
-			answersCol2.appendChild(answerD);
-
-			questionsContainer.appendChild(questionBox);
 		}
 
+		//TIMER
 		let index = 0;
+		let timer;
 
+		const nextBtn = document.getElementById('btn-next');
 		function startTimer() {
+			const timerBtn = document.getElementById('timer');
 			let timeMax = 15;
-			const timer = setInterval(function () {
+			timerBtn.textContent = `Time left: ${timeMax}s`;
+			timer = setInterval(function () {
 				timeMax--;
-				document.getElementById('timer').textContent = `Time left: ${timeMax}s`;
-				if (timeMax === 0) {
+				timerBtn.textContent = `Time left: ${timeMax}s`;
+				if (timeMax <= 0) {
 					clearInterval(timer);
 					index++;
 					if (index < randomQuestions.length) {
 						startTimer();
 					}
 				}
+				if (index === randomQuestions.length) {
+					window.location.href = '../../src/completed.html';
+				}
 			}, 1000);
+
+			// CREATE NUMBER OF QUESTIONS
+			const questionsNum = document.getElementById('questionsNum');
+			questionsNum.className = 'questions-num';
+			questionsNum.textContent = `${index + 1} / ${randomQuestions.length}`;
 		}
 
 		startTimer();
+
+		// NEXT BUTTON
+		nextBtn.addEventListener('click', function () {
+			index++;
+			if (index < randomQuestions.length) {
+				clearInterval(timer);
+				startTimer();
+			}
+		});
+
+		let questionIndex = 0;
+		function findAnswer() {
+			resetAnswers();
+			const buttons = document.querySelectorAll('.btn-answer');
+			const firstButtonIndex = questionIndex * 4;
+			const lastButtonIndex = firstButtonIndex + 3;
+
+			for (let i = firstButtonIndex; i <= lastButtonIndex; i++) {
+				buttons[i].setAttribute('data-button-index', i - firstButtonIndex + 1);
+
+				buttons[i].addEventListener('click', () => {
+					const selectedButtonIndex = Number(buttons[i].getAttribute('data-button-index'));
+
+					if (selectedButtonIndex === randomQuestions[questionIndex].ansIndex) {
+						buttons[i].style.backgroundColor = 'green';
+					} else {
+						buttons[i].style.backgroundColor = 'red';
+					}
+
+					for (let j = firstButtonIndex; j <= lastButtonIndex; j++) {
+						buttons[j].disabled = true;
+					}
+				});
+			}
+		}
+
+		function resetAnswers() {
+			const answerButtons = document.querySelectorAll('.btn-answer');
+			answerButtons.forEach((button) => {
+				button.classList.remove('selected');
+				button.style.backgroundColor = '';
+				// button.innerHTML = '';
+			});
+		}
+		findAnswer();
 	} catch (err) {
 		console.log(err);
 	}
