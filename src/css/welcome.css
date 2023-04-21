@@ -3,9 +3,9 @@
   font-size: 7rem;
 }
 
- .main-container {
+.main-container {
   overflow: hidden;
-} 
+}
 .main-title {
   display: flex;
   justify-content: center;
@@ -30,8 +30,8 @@
 
 .duckImg {
   margin-left: -6rem;
-  width: 30rem;
-  height: 30rem;
+  width: 22rem;
+  height: 22rem;
   transition: all 0.3s ease-in-out 0s;
 }
 

@@ -7,6 +7,16 @@
   text-align: center;
 }
 
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  max-height: 80vh;
+}
+
 .landing-btns-container {
   display: flex;
   justify-content: space-between;
@@ -34,10 +44,10 @@ h1 {
 
 .secondary-title {
   font-size: 4rem;
-  margin-top: 4rem;
   letter-spacing: 0.5rem;
   animation: 1s ease-out 0s 1 fadeIn;
   -webkit-animation: 3.8s fadeIn;
+  font-weight: 800;
 }
 
 .col {
@@ -73,7 +83,7 @@ img {
 .categories a {
   text-decoration: none;
 }
-.categories .button:hover {
+/* .categories .button:hover {
   background-color: #ffd256;
   color: #9305ff;
   transform: translateY(-10%);
@@ -81,7 +91,7 @@ img {
   -moz-transform: translateY(-10%);
   -ms-transform: translateY(-10%);
   -o-transform: translateY(-10%);
-}
+} */
 /* HTML for white button 
 					<div class="col">
 						<section class="history-section">
@@ -174,4 +184,76 @@ img {
   .categories h6 {
     font-size: 2rem;
   }
+}
+
+.categories-containers {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: 80px;
+}
+.categories-containers {
+  animation: 1s jump infinite;
+  -webkit-animation: 1s jump infinite;
+  cursor: pointer;
+}
+
+.category .category-name {
+  background-color: #ffffff;
+  color: #8701f1;
+  width: 30rem;
+  margin: 2rem;
+  height: 20rem;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 5px 5px rgb(0, 0, 0, 25%);
+  cursor: pointer;
+}
+
+.btn-containers-category {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  gap: 3rem;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  position: absolute;
+  top: 40px;
+  width: 120px;
+  height: 120px;
+}
+
+.global {
+  position: absolute;
+  left: 16%;
+}
+
+.book {
+  position: absolute;
+  right: 15%;
+}
+.category-name {
+  box-sizing: border-box;
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-top: 120px;
+}
+
+.category .category-name:hover {
+  color: #ffd256;
 }
