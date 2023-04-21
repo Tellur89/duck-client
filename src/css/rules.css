@@ -3,7 +3,7 @@
   -webkit-animation: none;
   position: relative;
   top: -100px;
-  font-size: 7rem;
+  font-size: 60px;
 }
 .rules-container {
   margin: 3rem;
@@ -82,6 +82,4 @@
 .btn-containers {
   display: flex;
   gap: 100px;
-  position: relative;
-  top: -30px;
 }
